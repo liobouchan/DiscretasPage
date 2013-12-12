@@ -61,10 +61,31 @@ head
         .box.w-25.h-70
           .img-cont.img-1
           h3
-            | Máximo y Mínimo Común Divisor
-            span Published May 3, 2012
+            | Máximo Común Divisor y Mínimo Común Multiplo
+            span De 2 Números
           p
             | Thundercats adipisicing marfa wes anderson farm-to-table, +1 vero yr ennui messenger bag occaecat williamsburg cosby sweater anim tattooed. Farm-to-table umami direct trade viral cosby sweater Austin. Magna tattooed irure, DIY do placeat helvetica sapiente laboris. Put a bird on it jean shorts wolf enim, viral authentic hoodie bespoke master cleanse proident. Ea pour-over swag wayfarers, Austin thundercats letterpress mollit 8-bit excepteur forage elit. Cupidatat minim dolore laborum whatever. Farm-to-table nihil tattooed, letterpress helvetica vegan semiotics pariatur pop-up. Helvetica ex godard selvage, sriracha echo park ut portland forage cardigan. Retro readymade williamsburg cliche laboris pinterest. Mollit aliqua direct trade, tumblr vegan lo-fi shoreditch semiotics sed 8-bit. Incididunt keffiyeh PBR cray, assumenda yr butcher nisi. Mustache brunch kogi, farm-to-table small batch odio fugiat consequat fap esse quinoa. Iphone banh mi brunch jean shorts sartorial, letterpress culpa direct trade master cleanse banksy fap whatever quinoa biodiesel. Portland eiusmod minim nihil Austin, sartorial aesthetic occupy tofu sriracha pitchfork seitan.
+          .input-wrapper
+            h3
+              | mcd(a,b) * mcm(a,b) = a * b
+            input.form-control( ng-model = 'gcf2' )
+            input.form-control( ng-model = 'gcf1' )
+            button( ng-click = 'gcf()' ) Calcular
+            h4
+              |MCD 
+              |&nbsp; = {{gcf.gcf}}
+              br
+              |MCM 
+              |&nbsp; = {{gcf.lcf}}
+              br
+              |X
+              sub 0
+              |&nbsp; = {{gcf.x}}
+              br
+              |Y
+              sub 0
+              |&nbsp; = {{gcf.y}}
+
         .box.w-50.h-70.box-b-l.box-b-r
           .img-cont.img-2
           h3
@@ -94,6 +115,12 @@ head
       .f-page.f-cover-back
         #codrops-ad-wrapper
     script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(src='/javascripts/bootstrap/modal.js')
+    script(src='/javascripts/jquery/jquery-ui-1.10.3.custom.min.js')
+    script( src='/javascripts/angular/angular.min.js' )
+    script(src='/javascripts/bootstrap/bootstrap.js')
+    script(src='/javascripts/bootstrap/application.js')
+    script(src='/javascripts/own/maximo_comun_divisor.js')
     script(type='text/javascript')
       var $container  = $( '#flip' ),
       $pages    = $container.children().hide();
