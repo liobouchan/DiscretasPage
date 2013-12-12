@@ -1,0 +1,96 @@
+body{
+  background-color: #addc50;
+}
+
+.big-container{
+  float: none;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.draggables-container{
+  float: none;
+  margin: auto;
+  margin-bottom: 10px;
+
+  .draggable{
+    border-top: 0;
+    border-left: 0;
+    color: #475b05;
+    margin: 3px;
+    min-width: 9%;
+    min-height: 50px;
+    float: left;
+  }
+
+  .draggable:hover{
+    cursor: pointer;
+  }
+}
+
+.draggables-container:before{
+  color: #f0f0f0;
+  color: rgba(244,244,244,0.65);
+  font-family: "Bookman Old Style", Bookman, Garamond, serif;
+  position: absolute;
+  line-height: 60px;
+  width: 75px;
+  height: 75px;
+  font-size: 100px;
+  z-index: 1;
+  left: -12px;
+  top: -20px;
+  content: 'u';
+}
+
+.droppable{
+  background-color: #80A34C;
+  color: #bff21b;
+  min-height: 150px;
+  width: 30%;
+  margin: 10px;
+  padding: 5px;
+
+  .temporal-element{
+    float: left;
+    margin: 5px;
+    font-size: 1.5em;
+    min-width: 30px;
+    min-height: 30px;
+
+    .cross{
+      color: #CCCCCC;
+    }
+
+    .cross:hover{
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
+
+.droppable:before{
+  color: #f0f0f0;
+  color: rgba(244,244,244,0.65);
+  font-family: "Bookman Old Style", Bookman, Garamond, serif;
+  position: absolute;
+  line-height: 60px;
+  width: 75px;
+  height: 75px;
+  font-size: 50px;
+  z-index: 1;
+  left: -10px;
+  top: 100px;
+}
+
+#subsetA:before{
+  content: 'A';
+}
+
+#subsetB:before{
+  content: 'B';
+}
+
+#subsetC:before{
+  content: 'C';
+}
